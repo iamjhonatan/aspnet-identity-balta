@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddDbContext<AppDbContext>(options => 
-                                    options.UseSqlServer("Server=localhost;Database=AspNetIdentityEndpoint;Trusted_Connection=True;encrypt=false")
+                                    options.UseSqlServer("Server=localhost;Database=IdentityEndpoints;Trusted_Connection=True;encrypt=false")
     );
 
 // builder.Services.AddAuthentication();
