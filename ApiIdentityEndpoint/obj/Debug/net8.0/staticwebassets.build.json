@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5tQ7W83JLCFARGcO/XFXQAW6ILNcLSr2/1n5OFcTVGU=",
+  "Source": "ApiIdentityEndpoint",
+  "BasePath": "_content/ApiIdentityEndpoint",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
