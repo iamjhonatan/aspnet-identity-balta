@@ -1,6 +1,7 @@
 using ApiIdentityEndpoint.Data;
 using ApiIdentityEndpoint.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +24,11 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-app.MapSwagger().RequireAuthorization();
+app.MapSwagger();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", (ClaimsPrincipal user) => user.Identity!.Name)
+    .RequireAuthorization();
+
 app.MapIdentityApi<User>();
 
 app.Run();
